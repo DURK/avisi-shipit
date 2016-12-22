@@ -7,8 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <h1>Dynamic Widgets:</h1>
+
+  <h4>Insert widget here</h4>
+  <my-component></my-component>
+
+  <h3>MoreWidget directives:</h3>
+  <more-widget *ngFor="let widget of widgets" [widget]="widget">
+  </more-widget>
+
 </ion-content>
