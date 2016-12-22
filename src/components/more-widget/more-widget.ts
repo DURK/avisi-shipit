@@ -8,9 +8,7 @@ import { Widget } from './widget';
 export class MoreWidgetComponent implements OnChanges, OnDestroy {
   @Input()
   widget: Widget;
-
   private componentRef;
-  private init = false;
 
   constructor(private viewContainerRef: ViewContainerRef,
               private componentFactoryResolver: ComponentFactoryResolver) {
@@ -22,8 +20,6 @@ export class MoreWidgetComponent implements OnChanges, OnDestroy {
     }
 
     this.renderComponent();
-
-    this.init = true;
   }
 
   private renderComponent() {
